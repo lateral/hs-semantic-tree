@@ -134,9 +134,8 @@ def cluster_next_node(t, node, node_codes, verbose=0):
     """
     Given a tree 't' and a node 'node' in the tree, apply GMM based
     clustering to the vectors of the node and add the resulting child
-    nodes to the tree.
+    nodes to the tree. Adds the new codewords to the set 'node_codes'.
     """
-    # Cluster the node's vectors using a GMM
     if len(node.vecs) < 2:
         return t, node_codes
     
