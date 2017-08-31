@@ -46,13 +46,25 @@ class Node:
 
         
 class Tree:
+    """
+    Class representing a binary tree holding a set of word vectors
+    at each node.
+    """
     def __init__(self):
         self.root = None
 
     def get_root(self):
+        """
+        Return the root node of the tree.
+        """
         return self.root
 
     def add(self, vecs, node=None, side=None, mean=None):
+        """
+        Add the vectors 'vecs' to the node 'node' as left or right
+        child node, as specified by 'side'. Additionally provide 
+        the mean vector 'mean'.
+        """
         if(self.root == None):
             self.root = Node(vecs=vecs, code='0')
         else:
